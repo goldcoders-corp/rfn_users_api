@@ -30,7 +30,7 @@ jobs:
       - name: Release lambda
         run: |
           pip install cargo-lambda
-          cargo lambda build --release
+          cargo lambda build --release --arm64
           cargo lambda deploy rfn_users_api
         env:
           AWS_DEFAULT_REGION: ap-east-1
